@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --grayscale-900: #19191D;
+  --color-fgcolor-neutral-secondary: #C3C3C6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+
+  }
+}
+
+body {
+  color: var(--color-fgcolor-neutral-secondary);
+  background: var(--grayscale-900);
+  font-family: Arial, Helvetica, sans-serif;
+}
