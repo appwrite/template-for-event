@@ -9,14 +9,19 @@ export default {
   theme: {
     extend: {
       colors: {
+        neutral: {
+          200: "var(--neutral-200)",
+          500: "var(--neutral-500)",
+          800: "var(--neutral-800)",
+        },
         grayscale: {
-          900: "var(--grayscale-900)"
+          900: "var(--grayscale-900)",
         },
         fgcolor: {
           neutral: {
-            secondary: "var(--color-fgcolor-neutral-secondary)"
-          }
-        }
+            secondary: "var(--color-fgcolor-neutral-secondary)",
+          },
+        },
       },
     },
   },
