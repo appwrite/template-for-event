@@ -5,7 +5,7 @@ export const Navbar = () => {
   return (
     <nav
       className={
-        "sticky top-7 flex w-[51rem] flex-row items-center justify-between rounded-2xl border border-neutral-800 p-4 backdrop-blur-xl"
+        "sticky top-7 z-10 flex w-[51rem] flex-row items-center justify-between rounded-2xl border border-neutral-800 p-4 backdrop-blur-xl"
       }
     >
       <Logo />
