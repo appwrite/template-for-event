@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Tag } from "@/components/Tag";
 
 export const Prizes = () => {
   return (
@@ -10,6 +11,9 @@ export const Prizes = () => {
           "row-span-2 flex flex-col gap-6 rounded-2xl border border-neutral-800 bg-neutral-900 p-3"
         }
       >
+        <div className={"absolute ml-2 mt-2"}>
+          <Tag>1</Tag>
+        </div>
         <Image
           src={"/images/prize-first.png"}
           alt={"Apple watch"}
@@ -28,6 +32,9 @@ export const Prizes = () => {
           "flex flex-col gap-6 rounded-2xl border border-neutral-800 bg-neutral-900 p-3"
         }
       >
+        <div className={"absolute ml-2 mt-2"}>
+          <Tag>2</Tag>
+        </div>
         <Image
           src={"/images/prize-second.png"}
           alt={"Apple watch"}
@@ -46,6 +53,9 @@ export const Prizes = () => {
           "flex flex-col gap-6 rounded-2xl border border-neutral-800 bg-neutral-900 p-3"
         }
       >
+        <div className={"absolute ml-2 mt-2"}>
+          <Tag>3</Tag>
+        </div>
         <Image
           src={"/images/prize-third.png"}
           alt={"Apple watch"}

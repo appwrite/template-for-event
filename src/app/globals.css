@@ -10,7 +10,6 @@
 
 :root {
   --color-fgcolor-neutral-primary: #2D2D31;
-  --color-fgcolor-neutral-secondary: #C3C3C6;
   --neutral-50: #EDEDF0;
   --neutral-100: #E4E4E7;
   --neutral-200: #d8d8db;
@@ -28,7 +27,7 @@
 }
 
 body {
-  color: var(--color-fgcolor-neutral-secondary);
+  color: var(--neutral-250);
   background: var(--neutral-900);
   font-family: Arial, Helvetica, sans-serif;
 }
