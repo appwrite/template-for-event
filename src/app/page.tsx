@@ -4,6 +4,7 @@ import Github from "../../public/images/Github.svg";
 import Image from "next/image";
 import { EventDate } from "@/components/EventDate";
 import { Prizes } from "@/components/Prizes";
+import { Faq } from "@/components/Faq";
 
 export default function Home() {
   return (
@@ -57,6 +58,11 @@ export default function Home() {
           </p>
         </div>
         <Prizes />
+      </section>
+
+      {/* FAQ section */}
+      <section className={"w-full px-28"}>
+        <Faq />
       </section>
     </main>
   );
