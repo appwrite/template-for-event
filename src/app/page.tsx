@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/Button";
 import Github from "../../public/images/Github.svg";
 import Image from "next/image";
+import { EventDate } from "@/components/EventDate";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <div className="absolute right-0 top-0 h-96 w-[47rem] rotate-180 bg-white opacity-5 blur-3xl"></div>
 
       <Navbar />
+      {/* Newsletter section */}
       <section
         className={"flex max-w-3xl flex-col items-center justify-center pt-56"}
       >
@@ -35,7 +37,10 @@ export default function Home() {
             <span>Login with GitHub</span>
           </Button>
         </div>
+        <EventDate />
       </section>
+
+      {/* Prizes section */}
     </main>
   );
 }
