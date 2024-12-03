@@ -3,7 +3,11 @@ import { useState } from "react";
 import Chevron from "../../public/images/chevron.svg";
 import Image from "next/image";
 
-export const Faq = () => {
+type FaqProps = {
+  title: string;
+};
+
+export const Faq = ({ title }: FaqProps) => {
   const [openQuestionId, setOpenQuestionId] = useState(1);
 
   const entries: Array<{ id: number; question: string; answer: string }> = [
@@ -97,8 +101,8 @@ export const Faq = () => {
   };
 
   return (
-    <div className={"gap- flex max-w-screen-xl flex-row"}>
-      <h2 className={"w-64 text-3xl text-neutral-50"}>FAQ</h2>
+    <div className={"flex max-w-screen-xl flex-row gap-4"}>
+      <h2 className={"w-64 text-3xl text-neutral-50"}>{title}</h2>
       <div className={"grow"}>{showEntries()}</div>
     </div>
   );

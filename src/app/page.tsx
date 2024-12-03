@@ -63,7 +63,7 @@ export default function Home() {
 
       {/* FAQ section */}
       <section className={"mb-20 w-full px-28"}>
-        <Faq />
+        <Faq title={"FAQ"} />
       </section>
 
       {/* Footer */}
