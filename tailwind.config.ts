@@ -10,13 +10,17 @@ export default {
     extend: {
       colors: {
         neutral: {
+          50: "var(--neutral-50)",
+          100: "var(--neutral-100)",
           200: "var(--neutral-200)",
           250: "var(--neutral-250)",
+          300: "var(--neutral-300)",
           500: "var(--neutral-500)",
           800: "var(--neutral-800)",
+          900: "var(--neutral-900)",
         },
-        grayscale: {
-          900: "var(--grayscale-900)",
+        gradient: {
+          homepage: "rgba(35, 35, 37, 0.90)",
         },
         fgcolor: {
           neutral: {

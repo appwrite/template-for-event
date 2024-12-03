@@ -3,6 +3,7 @@ import { Button } from "@/components/Button";
 import Github from "../../public/images/Github.svg";
 import Image from "next/image";
 import { EventDate } from "@/components/EventDate";
+import { Prizes } from "@/components/Prizes";
 
 export default function Home() {
   return (
@@ -13,7 +14,9 @@ export default function Home() {
       <Navbar />
       {/* Newsletter section */}
       <section
-        className={"flex max-w-3xl flex-col items-center justify-center pt-56"}
+        className={
+          "mb-20 flex max-w-3xl flex-col items-center justify-center pt-56"
+        }
       >
         <h1 className={"title-large mb-4 text-center"}>
           <span className={"text-neutral-500"}>Your Hackathon</span>
@@ -41,6 +44,20 @@ export default function Home() {
       </section>
 
       {/* Prizes section */}
+      <section
+        className={
+          "to-gradient-homepage flex w-full flex-col justify-center bg-gradient-to-t from-neutral-900 p-28"
+        }
+      >
+        <div className={"mb-16 flex flex-col items-center gap-4"}>
+          <h2 className={"text-3xl text-neutral-50"}>Prizes</h2>
+          <p className={"max-w-lg text-neutral-500"}>
+            Lorem ipsum dolor sit amet consectetur. Mauris eu sit gravida
+            dignissim semper euismod. Imperdiet eget rhoncus eget purus.
+          </p>
+        </div>
+        <Prizes />
+      </section>
     </main>
   );
 }
