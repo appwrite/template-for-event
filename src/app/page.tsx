@@ -5,6 +5,7 @@ import Image from "next/image";
 import { EventDate } from "@/components/EventDate";
 import { Prizes } from "@/components/Prizes";
 import { Faq } from "@/components/Faq";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -61,9 +62,12 @@ export default function Home() {
       </section>
 
       {/* FAQ section */}
-      <section className={"w-full px-28"}>
+      <section className={"mb-20 w-full px-28"}>
         <Faq />
       </section>
+
+      {/* Footer */}
+      <Footer />
     </main>
   );
 }
