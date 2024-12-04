@@ -31,7 +31,9 @@ export default function LoggedInLayout({
     <></>
   ) : (
     <>
-      <NavbarLoggedin user={user} />
+      <div className={"mb-16"}>
+        <NavbarLoggedin user={user} />
+      </div>
       {children}
     </>
   );

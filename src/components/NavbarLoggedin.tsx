@@ -3,6 +3,7 @@ import { Models } from "appwrite";
 import { Button } from "@/components/Button";
 import { Avatar } from "@/components/Avatar";
 import { signout } from "@/tools/account";
+import Link from "next/link";
 
 type NavbarLoggedinProps = {
   user: Models.User<Models.Preferences>;
@@ -15,7 +16,9 @@ export const NavbarLoggedin = ({ user }: NavbarLoggedinProps) => {
         "bg-neutral-850 bg flex justify-between border-b border-neutral-800 px-4 py-2"
       }
     >
-      <Logo />
+      <Link href={"/hacker"}>
+        <Logo />
+      </Link>
       <div className={"flex items-center gap-4"}>
         <Button
           size={"small"}
