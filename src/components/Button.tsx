@@ -1,20 +1,28 @@
 "use client";
-import { PropsWithChildren } from "react";
+import {
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+  PropsWithChildren,
+} from "react";
 
-type ButtonProps = PropsWithChildren & {
+type ButtonProps = DetailedHTMLProps<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+> & {
   onClick?: () => void;
-  size?: "small" | "medium";
-  type?: "primary" | "secondary";
+  buttonSize?: "small" | "medium";
+  buttonType?: "primary" | "secondary";
 };
 
 export const Button = ({
   children,
   onClick,
-  size = "medium",
-  type = "primary",
+  buttonSize = "medium",
+  buttonType = "primary",
+  ...props
 }: ButtonProps) => {
   const getSize = () => {
-    switch (size) {
+    switch (buttonSize) {
       case "small":
         return "px-2.5 py-1.5 text-sm";
       case "medium":
@@ -23,7 +31,7 @@ export const Button = ({
   };
 
   const getType = () => {
-    switch (type) {
+    switch (buttonType) {
       case "primary":
         return "bg-white text-neutral-800";
       case "secondary":
@@ -35,6 +43,7 @@ export const Button = ({
     <button
       className={`flex w-fit flex-row items-center gap-2 rounded-lg ${getType()} ${getSize()}`}
       onClick={onClick}
+      {...props}
     >
       {children}
     </button>
