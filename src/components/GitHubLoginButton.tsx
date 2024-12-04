@@ -1,5 +1,5 @@
 "use client";
-import { loginWithGithub } from "@/tools/login";
+import { loginWithGithub } from "@/tools/account";
 import Image from "next/image";
 import Github from "../../public/images/Github.svg";
 import { Button } from "@/components/Button";
