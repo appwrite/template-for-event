@@ -1,11 +1,9 @@
 import { Navbar } from "@/components/Navbar";
-import { Button } from "@/components/Button";
-import Github from "../../public/images/Github.svg";
-import Image from "next/image";
 import { EventDate } from "@/components/EventDate";
 import { Prizes } from "@/components/Prizes";
 import { Faq } from "@/components/Faq";
 import { Footer } from "@/components/Footer";
+import { GitHubLoginButton } from "@/components/GitHubLoginButton";
 
 export default function Home() {
   return (
@@ -32,15 +30,7 @@ export default function Home() {
           opportunity to collaborate and showcase your skills.
         </p>
         <div className={"mb-16 mt-10"}>
-          <Button>
-            <Image
-              src={Github.src}
-              alt={"Github icon"}
-              width={20}
-              height={20}
-            />
-            <span>Login with GitHub</span>
-          </Button>
+          <GitHubLoginButton />
         </div>
         <EventDate />
       </section>

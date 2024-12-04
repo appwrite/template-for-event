@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   title: "Dev Hackathon",
   description: "The best hackathon in town",
 };
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
