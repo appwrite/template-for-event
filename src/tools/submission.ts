@@ -4,6 +4,11 @@ import { AppwriteClient } from "@/tools/appwrite";
 import { redirect } from "next/navigation";
 import { getUser } from "@/tools/account";
 
+export type Submissions = {
+  total: number;
+  documents: Array<HackerSubmission>;
+};
+
 export const createNewSubmission = async (submission: HackerSubmission) => {
   const user = await getUser();
   if (user) {
@@ -19,12 +24,8 @@ export const createNewSubmission = async (submission: HackerSubmission) => {
   }
 };
 
-export const getUserSubmissions = async (): Promise<{
-  total: number;
-  documents: Array<HackerSubmission>;
-}> => {
+export const getUserSubmissions = async (): Promise<Submissions> => {
   const user = await getUser();
-  console.log("user", user);
   if (user) {
     const databases = new Databases(AppwriteClient);
     const documents = await databases.listDocuments(
@@ -39,4 +40,9 @@ export const getUserSubmissions = async (): Promise<{
     };
   }
   return { total: 0, documents: [] };
+};
+
+export const deleteUserSubmission = async (documentId: string) => {
+  const databases = new Databases(AppwriteClient);
+  await databases.deleteDocument("hackathon", "submissions", documentId);
 };

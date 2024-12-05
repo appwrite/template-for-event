@@ -13,6 +13,7 @@ export type HackerSubmission = {
   stack: string;
   repositoryLink: string;
   demoLink: string;
+  $id: string;
 };
 
 export default function Submit() {

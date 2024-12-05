@@ -16,7 +16,6 @@ export default function LoggedInLayout({
 
   const loadUser = async () => {
     const user = await getUser();
-    console.log("layout user", user);
     if (user) {
       setUser(user);
     } else {
