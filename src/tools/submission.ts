@@ -1,4 +1,4 @@
-import { Databases, ID } from "appwrite";
+import { Databases, ID, Query } from "appwrite";
 import { HackerSubmission } from "@/app/hacker/submit/page";
 import { AppwriteClient } from "@/tools/appwrite";
 import { redirect } from "next/navigation";
@@ -17,4 +17,25 @@ export const createNewSubmission = async (submission: HackerSubmission) => {
   } else {
     redirect("/");
   }
+};
+
+export const getUserSubmissions = async (): Promise<{
+  total: number;
+  documents: Array<HackerSubmission>;
+}> => {
+  const user = await getUser();
+  if (user) {
+    const databases = new Databases(AppwriteClient);
+    const documents = await databases.listDocuments(
+      "hackathon",
+      "submissions",
+      [Query.equal("user-id", user.$id)],
+    );
+
+    return documents as unknown as {
+      total: number;
+      documents: Array<HackerSubmission>;
+    };
+  }
+  return { total: 0, documents: [] };
 };
