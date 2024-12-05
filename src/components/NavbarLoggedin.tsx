@@ -10,7 +10,6 @@ type NavbarLoggedinProps = {
 };
 
 export const NavbarLoggedin = ({ user }: NavbarLoggedinProps) => {
-  console.log(user);
   return (
     <nav
       className={

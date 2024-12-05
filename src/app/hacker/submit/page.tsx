@@ -4,8 +4,9 @@ import { Button } from "@/components/Button";
 import Link from "next/link";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { redirect } from "next/navigation";
+import { createNewSubmission } from "@/tools/submission";
 
-type HackerSubmission = {
+export type HackerSubmission = {
   title: string;
   description: string;
   inspiration: string;
@@ -18,12 +19,12 @@ export default function Submit() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<HackerSubmission>();
 
-  const onSubmit: SubmitHandler<HackerSubmission> = (data) => console.log(data);
-  console.log(errors);
+  const onSubmit: SubmitHandler<HackerSubmission> = (data) => {
+    createNewSubmission(data);
+  };
   return (
     <main className={"flex flex-col items-center"}>
       <div className={"w-full px-5 md:w-[600px] md:px-0"}>
