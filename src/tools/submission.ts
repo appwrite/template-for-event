@@ -24,6 +24,7 @@ export const getUserSubmissions = async (): Promise<{
   documents: Array<HackerSubmission>;
 }> => {
   const user = await getUser();
+  console.log("user", user);
   if (user) {
     const databases = new Databases(AppwriteClient);
     const documents = await databases.listDocuments(
