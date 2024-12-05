@@ -10,6 +10,7 @@ type NavbarLoggedinProps = {
 };
 
 export const NavbarLoggedin = ({ user }: NavbarLoggedinProps) => {
+  console.log(user);
   return (
     <nav
       className={
@@ -21,8 +22,8 @@ export const NavbarLoggedin = ({ user }: NavbarLoggedinProps) => {
       </Link>
       <div className={"flex items-center gap-4"}>
         <Button
-          size={"small"}
-          type={"secondary"}
+          buttonSize={"small"}
+          buttonType={"secondary"}
           onClick={() => {
             signout();
           }}
