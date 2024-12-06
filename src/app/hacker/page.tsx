@@ -30,7 +30,7 @@ export default function Dashboard() {
             <span className={"mb-2 text-sm font-medium text-neutral-50"}>
               No submissions yet
             </span>
-            <span className={"mb-6 text-sm"}>
+            <span className={"mb-6 px-4 text-center text-sm md:px-0"}>
               Create a submission to participate in the hackathon
             </span>
             <Link href={"/hacker/submit"}>
@@ -43,7 +43,7 @@ export default function Dashboard() {
       return (
         <div
           className={
-            "grid w-full border-separate grid-cols-4 rounded border border-neutral-800"
+            "grid w-full border-separate grid-cols-2 rounded border border-neutral-800 lg:grid-cols-4"
           }
         >
           <div
@@ -52,12 +52,16 @@ export default function Dashboard() {
             Name project
           </div>
           <div
-            className={"border-b border-neutral-800 bg-neutral-900 px-3 py-2.5"}
+            className={
+              "hidden border-b border-neutral-800 bg-neutral-900 px-3 py-2.5 lg:table-cell"
+            }
           >
             Repository link
           </div>
           <div
-            className={"border-b border-neutral-800 bg-neutral-900 px-3 py-2.5"}
+            className={
+              "hidden border-b border-neutral-800 bg-neutral-900 px-3 py-2.5 lg:table-cell"
+            }
           >
             Demo link
           </div>
@@ -65,19 +69,27 @@ export default function Dashboard() {
             className={"border-b border-neutral-800 bg-neutral-900 px-3 py-2.5"}
           ></div>
 
-          {submissions.documents.map((submission) => {
+          {submissions.documents.map((submission, index) => {
             return (
               <div className={"contents"} key={submission.$id}>
-                <div className={"bg-neutral-850 px-3 py-2.5"}>
+                <div
+                  className={`bg-neutral-850 flex items-center px-3 py-2.5 ${index < submissions.total - 1 ? "border-b border-neutral-800" : ""}`}
+                >
                   {submission.title}
                 </div>
-                <div className={"bg-neutral-850 px-3 py-2.5"}>
+                <div
+                  className={`bg-neutral-850 hidden items-center px-3 py-2.5 lg:flex ${index < submissions.total - 1 ? "border-b border-neutral-800" : ""}`}
+                >
                   {submission.repositoryLink}
                 </div>
-                <div className={"bg-neutral-850 px-3 py-2.5"}>
+                <div
+                  className={`bg-neutral-850 hidden items-center px-3 py-2.5 lg:flex ${index < submissions.total - 1 ? "border-b border-neutral-800" : ""}`}
+                >
                   {submission.demoLink}
                 </div>
-                <div className={"bg-neutral-850 px-3 py-2.5"}>
+                <div
+                  className={`bg-neutral-850 flex items-center justify-end gap-4 px-3 py-2.5 ${index < submissions.total - 1 ? "border-b border-neutral-800" : ""}`}
+                >
                   <Button
                     buttonSize={"small"}
                     buttonType={"secondary"}
@@ -87,6 +99,14 @@ export default function Dashboard() {
                     }}
                   >
                     Delete
+                  </Button>
+                  <Button
+                    buttonSize={"small"}
+                    buttonType={"secondary"}
+                    onClick={async () => {}}
+                  >
+                    View
+                    <span className={"hidden sm:inline"}> submission</span>
                   </Button>
                 </div>
               </div>

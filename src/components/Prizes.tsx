@@ -4,7 +4,9 @@ import { Tag } from "@/components/Tag";
 export const Prizes = () => {
   return (
     <div
-      className={"grid max-w-screen-xl grid-cols-[2fr_1fr] grid-rows-2 gap-8"}
+      className={
+        "grid max-w-screen-xl grid-cols-1 grid-rows-2 gap-8 md:grid-cols-[2fr_1fr]"
+      }
     >
       <div
         className={

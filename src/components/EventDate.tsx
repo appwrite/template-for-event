@@ -2,7 +2,7 @@ export const EventDate = () => {
   return (
     <div
       className={
-        "sp flex w-96 flex-row items-center justify-around border-y border-neutral-800"
+        "sp flex w-72 flex-row items-center justify-around border-y border-neutral-800 sm:w-96"
       }
     >
       <div className={"flex flex-col justify-center py-2.5"}>

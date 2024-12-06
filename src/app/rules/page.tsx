@@ -4,9 +4,15 @@ import { Footer } from "@/components/Footer";
 
 export default function Rules() {
   return (
-    <main className={"flex min-h-screen flex-col items-center justify-between"}>
+    <main
+      className={
+        "flex min-h-screen flex-col items-center justify-between px-6 lg:px-0"
+      }
+    >
       <Navbar />
-      <Faq title={"Hackathon rules"} />
+      <div className={"max-w-3xl"}>
+        <Faq title={"Hackathon rules"} />
+      </div>
       <Footer />
     </main>
   );

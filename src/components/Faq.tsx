@@ -101,7 +101,9 @@ export const Faq = ({ title }: FaqProps) => {
   };
 
   return (
-    <div className={"flex max-w-screen-xl flex-row gap-4"}>
+    <div
+      className={"mt-4 flex max-w-screen-xl flex-col gap-4 md:mt-0 md:flex-row"}
+    >
       <h2 className={"w-64 text-3xl text-neutral-50"}>{title}</h2>
       <div className={"grow"}>{showEntries()}</div>
     </div>

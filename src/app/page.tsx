@@ -10,12 +10,11 @@ export default function Home() {
     <main className={"flex flex-col items-center"}>
       <div className="absolute right-0 top-0 h-96 w-[47rem] bg-[url('/images/galaxy.svg')] bg-cover bg-no-repeat"></div>
       <div className="absolute right-0 top-0 h-96 w-[47rem] rotate-180 bg-white opacity-5 blur-3xl"></div>
-
       <Navbar />
       {/* Newsletter section */}
       <section
         className={
-          "mb-20 flex max-w-3xl flex-col items-center justify-center pt-56"
+          "mb-20 flex w-full max-w-3xl flex-col items-center justify-center px-4 pt-56 md:w-auto md:px-0"
         }
       >
         <h1 className={"title-large mb-4 text-center"}>
@@ -34,28 +33,25 @@ export default function Home() {
         </div>
         <EventDate />
       </section>
-
       {/* Prizes section */}
       <section
         className={
-          "to-gradient-homepage flex w-full flex-col justify-center bg-gradient-to-t from-neutral-900 p-28"
+          "flex w-full flex-col items-center justify-center bg-gradient-to-t from-neutral-900 to-gradient-homepage p-4 md:p-28"
         }
       >
         <div className={"mb-16 flex flex-col items-center gap-4"}>
           <h2 className={"text-3xl text-neutral-50"}>Prizes</h2>
-          <p className={"max-w-lg text-neutral-500"}>
+          <p className={"max-w-lg text-center text-neutral-500"}>
             Lorem ipsum dolor sit amet consectetur. Mauris eu sit gravida
             dignissim semper euismod. Imperdiet eget rhoncus eget purus.
           </p>
         </div>
         <Prizes />
       </section>
-
       {/* FAQ section */}
-      <section className={"mb-20 w-full px-28"}>
+      <section className={"mb-20 flex w-full flex-col items-center px-28"}>
         <Faq title={"FAQ"} />
       </section>
-
       {/* Footer */}
       <Footer />
     </main>
