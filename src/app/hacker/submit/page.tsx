@@ -1,9 +1,6 @@
 "use client";
-import { InputText, InputTextarea } from "@/components/form";
-import { Button } from "@/components/Button";
-import Link from "next/link";
-import { SubmitHandler, useForm } from "react-hook-form";
-import { redirect } from "next/navigation";
+
+import { SubmitHandler } from "react-hook-form";
 import { createNewSubmission } from "@/tools/submission";
 import { SubmissionForm } from "@/components/form/SubmissionForm";
 

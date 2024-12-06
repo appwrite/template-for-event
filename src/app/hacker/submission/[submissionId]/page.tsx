@@ -9,18 +9,17 @@ import { redirect } from "next/navigation";
 export default function Submission({
   params,
 }: {
-  params: { submissionId: string };
+  params: Promise<{ submissionId: string }>;
 }) {
   const [submission, setSubmission] = useState<null | HackerSubmission>(null);
 
-  const loadSubmission = async () => {
-    const submissionId = (await params).submissionId;
-    setSubmission((await getSubmission(submissionId)) ?? null);
-  };
-
   useEffect(() => {
+    const loadSubmission = async () => {
+      const submissionId = (await params).submissionId;
+      setSubmission((await getSubmission(submissionId)) ?? null);
+    };
     loadSubmission();
-  }, []);
+  }, [params]);
 
   const onSubmit: SubmitHandler<HackerSubmission> = async (data) => {
     await updateSubmission({ ...data, $id: (await params).submissionId });
