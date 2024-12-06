@@ -24,6 +24,18 @@ export const createNewSubmission = async (submission: HackerSubmission) => {
   }
 };
 
+export const updateSubmission = async (
+  submission: HackerSubmission,
+): Promise<void> => {
+  const databases = new Databases(AppwriteClient);
+  await databases.updateDocument(
+    "hackathon",
+    "submissions",
+    submission.$id,
+    submission,
+  );
+};
+
 export const getUserSubmissions = async (): Promise<Submissions> => {
   const user = await getUser();
   if (user) {
@@ -45,4 +57,16 @@ export const getUserSubmissions = async (): Promise<Submissions> => {
 export const deleteUserSubmission = async (documentId: string) => {
   const databases = new Databases(AppwriteClient);
   await databases.deleteDocument("hackathon", "submissions", documentId);
+};
+
+export const getSubmission = async (
+  documentId: string,
+): Promise<HackerSubmission | undefined> => {
+  const databases = new Databases(AppwriteClient);
+  const submission = await databases.getDocument(
+    "hackathon",
+    "submissions",
+    documentId,
+  );
+  return submission ? (submission as never as HackerSubmission) : undefined;
 };
