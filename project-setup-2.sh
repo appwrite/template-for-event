@@ -1,0 +1,1 @@
+appwrite push collection --all --force
