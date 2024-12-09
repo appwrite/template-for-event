@@ -13,7 +13,7 @@ export const NavbarLoggedin = ({ user }: NavbarLoggedinProps) => {
   return (
     <nav
       className={
-        "bg-neutral-850 bg flex justify-between border-b border-neutral-800 px-4 py-2"
+        "bg flex items-center justify-between border-b border-neutral-800 bg-neutral-850 px-4 py-2"
       }
     >
       <Link href={"/hacker"}>
