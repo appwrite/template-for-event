@@ -12,7 +12,7 @@ export const GitHubLoginButton = () => {
       }}
     >
       <Image src={Github.src} alt={"Github icon"} width={20} height={20} />
-      <span>Login with GitHub</span>
+      <span>Sign in with GitHub</span>
     </Button>
   );
 };

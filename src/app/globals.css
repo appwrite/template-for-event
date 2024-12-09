@@ -20,6 +20,7 @@
   --neutral-800: #2D2D31;
   --neutral-850: #1D1D21;
   --neutral-900: #19191C;
+  --neutral-900-80: #19191CCC;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -9,10 +9,16 @@ export default function Rules() {
         "flex min-h-screen flex-col items-center justify-between px-6 lg:px-0"
       }
     >
-      <Navbar />
-      <div className={"max-w-3xl"}>
-        <Faq title={"Hackathon rules"} />
-      </div>
+      <Navbar selectedRoute={"rules"} />
+      <section className={"mt-20 flex w-full flex-col items-center"}>
+        <div
+          className={
+            "mb-20 flex w-full max-w-5xl flex-col items-center p-4 md:py-28 lg:p-0"
+          }
+        >
+          <Faq title={"Hackathon rules"} />
+        </div>
+      </section>
       <Footer />
     </main>
   );

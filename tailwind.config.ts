@@ -20,6 +20,7 @@ export default {
           800: "var(--neutral-800)",
           850: "var(--neutral-850)",
           900: "var(--neutral-900)",
+          "900-80": "var(--neutral-900-80)",
         },
         gradient: {
           homepage: "rgba(35, 35, 37, 0.90)",

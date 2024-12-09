@@ -20,7 +20,7 @@ export default function Home() {
         <h1 className={"title-large mb-4 text-center"}>
           <span className={"text-neutral-500"}>Your Hackathon</span>
           <br />
-          adventure starts here?
+          <span className={"text-neutral-50"}>adventure starts here</span>
         </h1>
         <p className={"text-center text-neutral-500"}>
           Join [Hackathon Name] and push your creativity to new heights! Solve
@@ -36,21 +36,33 @@ export default function Home() {
       {/* Prizes section */}
       <section
         className={
-          "flex w-full flex-col items-center justify-center bg-gradient-to-t from-neutral-900 to-gradient-homepage p-4 md:p-28"
+          "flex w-full flex-col items-center bg-gradient-to-t from-neutral-900 to-gradient-homepage"
         }
       >
-        <div className={"mb-16 flex flex-col items-center gap-4"}>
-          <h2 className={"text-3xl text-neutral-50"}>Prizes</h2>
-          <p className={"max-w-lg text-center text-neutral-500"}>
-            Lorem ipsum dolor sit amet consectetur. Mauris eu sit gravida
-            dignissim semper euismod. Imperdiet eget rhoncus eget purus.
-          </p>
+        <div
+          className={
+            "flex flex-col items-center justify-center p-4 md:py-28 lg:p-0 xl:w-[1200px]"
+          }
+        >
+          <div className={"mb-16 flex flex-col items-center gap-4"}>
+            <h2 className={"text-3xl text-neutral-50"}>Prizes</h2>
+            <p className={"max-w-lg text-center text-neutral-500"}>
+              Win amazing prizes for your creativity and innovation! Celebrate
+              your hard work with rewards that recognize your achievements.
+            </p>
+          </div>
+          <Prizes />
         </div>
-        <Prizes />
       </section>
       {/* FAQ section */}
-      <section className={"mb-20 flex w-full flex-col items-center px-28"}>
-        <Faq title={"FAQ"} />
+      <section className={"mt-20 flex w-full flex-col items-center"}>
+        <div
+          className={
+            "mb-20 flex w-full max-w-5xl flex-col items-center p-4 md:py-28 lg:p-0"
+          }
+        >
+          <Faq title={"FAQ"} />
+        </div>
       </section>
       {/* Footer */}
       <Footer />

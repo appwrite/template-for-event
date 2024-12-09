@@ -13,51 +13,51 @@ export const Faq = ({ title }: FaqProps) => {
   const entries: Array<{ id: number; question: string; answer: string }> = [
     {
       id: 1,
-      question: "Quis primus orator erit?",
+      question: "Who can participate in the hackathon?",
       answer:
-        "Primus orator, Marcus Tullius, de historia Romana disseret, praecipue de effectibus civilis belli ad culturam populorum.",
+        "Anyone passionate about coding, designing, or problem-solving is welcome! Whether you’re a beginner or a pro, there’s a place for everyone.",
     },
     {
       id: 2,
-      question: "Ubi congressus habebitur?",
+      question: "Do I need a team to register?",
       answer:
-        "Congressus in aula magna urbis Romae habebitur, quae iuxta forum antiquum sita est, die Solis hora septima.",
+        "You can register solo or as part of a team. If you're solo, don't worry—team formation opportunities will be available before the event.",
     },
     {
       id: 3,
-      question: "Quis cibus eventui praebebitur?",
+      question: "What is the theme of the hackathon?",
       answer:
-        "Cibum ex variis regionibus praeparatum, inter quas Etruria et Sicilia, ad gustum omnium participantium, praebebitur.",
+        "The theme will be announced at the start of the hackathon to keep things fair and exciting!",
     },
     {
       id: 4,
-      question: "Quales workshops praesto erunt?",
+      question: "How much does it cost to participate?",
       answer:
-        "Workshops includunt calligraphiam Latinam, studium rhetoricae, et cursum brevem historiae architecturae Romanae.",
+        "Participation is completely free! Just bring your creativity and enthusiasm.",
     },
     {
       id: 5,
-      question: "Quomodo nomen registrari potest?",
+      question: "What are the judging criteria?",
       answer:
-        "Ad registrandum nomen, oportet formam electronicam implere in pagina eventus vel nomen in die congressus ipso tradere.",
+        "Projects will be judged on innovation, impact, technical execution, and presentation.",
     },
     {
       id: 6,
-      question: "Quae argumenta in colloquiis tractabuntur?",
+      question: "Can I use pre-built code or libraries?",
       answer:
-        "In colloquiis tractabuntur argumenta de cultura antiqua, litteris, et mutationibus socialibus temporibus recentibus.",
+        "Yes, you can use open-source libraries or your own pre-written code, as long as you declare them during submission.",
     },
     {
       id: 7,
-      question: "Quae linguae in usu erunt?",
+      question: "Will there be mentors available?",
       answer:
-        "Lingua Latina erit primaria, sed interpretatio in Anglicum et Italicum praesto erit ut participes plures comprehendere possint.",
+        "Yes! Experienced mentors will be on hand throughout the event to guide and support you.",
     },
     {
       id: 8,
-      question: "Estne ingressus liber?",
+      question: "How do I submit my project?",
       answer:
-        "Ita vero, ingressus liber est, sed donatio voluntaria ad sustinendam operam organizationis grata erit.",
+        "You'll need to submit your project through our platform before the deadline. Detailed instructions will be provided during the event.",
     },
   ];
 
