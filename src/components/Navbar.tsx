@@ -28,7 +28,7 @@ export const Navbar = ({ selectedRoute }: NavbarProps) => {
             selectedRoute === "sign-in" ? "font-semibold" : "font-normal"
           }
         >
-          <Link href={"/hacker/sign-in"}>Sign in</Link>
+          <Link href={"/sign-in"}>Sign in</Link>
         </span>
       </div>
     </nav>
