@@ -3,6 +3,7 @@ import "./globals.css";
 
 import { Inter } from "next/font/google";
 import Head from "next/head";
+import { UserProvider } from "@/components/UserProvider";
 
 export const metadata: Metadata = {
   title: "Dev Hackathon",
@@ -20,7 +21,9 @@ export default function RootLayout({
       <Head>
         <meta property="og:image" content="/images/og-image.png" />
       </Head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <UserProvider>{children}</UserProvider>
+      </body>
     </html>
   );
 }

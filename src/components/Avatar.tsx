@@ -17,7 +17,7 @@ export const Avatar = ({ name }: AvatarProps) => {
   return (
     <div
       className={
-        "text-neutral-850 flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm"
+        "flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm text-neutral-850"
       }
     >
       {getAvatarLetters().toUpperCase()}

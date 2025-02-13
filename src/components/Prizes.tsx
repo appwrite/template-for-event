@@ -5,7 +5,7 @@ export const Prizes = () => {
   return (
     <div
       className={
-        "grid max-w-screen-xl grid-cols-1 grid-rows-2 gap-8 md:grid-cols-[2fr_1fr]"
+        "grid max-w-screen-xl grid-cols-1 grid-rows-2 gap-8 md:grid-cols-[2fr_1fr] xl:w-[1200px]"
       }
     >
       <div

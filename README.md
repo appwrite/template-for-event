@@ -1,16 +1,20 @@
-This is a [Next.js](https://nextjs.org) template utalizing [Appwrite](https://appwrite.io) for an online hackathon.
+This is a [Next.js](https://nextjs.org) template utilizing [Appwrite](https://appwrite.io) for an online hackathon.
 
 ## Getting Started
-First, install the dependancies:
+
+First, install the dependencies:
+
 ```bash
 pnpm i
 ```
 
 Then, set your Appwrite variables (put the .env in the root directory)
+
 ```env
-NEXT_PUBLIC_APPWRITE_FUNCTION_API_ENDPOINT=
 NEXT_PUBLIC_APPWRITE_FUNCTION_PROJECT_ID=
+NEXT_PUBLIC_APPWRITE_FUNCTION_API_ENDPOINT=
 ```
+
 When using Appwrite Sites these variables will automatically be added to your runtime.
 
 Run the project locally:

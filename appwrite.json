@@ -1,6 +1,6 @@
 {
-    "projectId": "6752f0d8000cddc3ed9e",
-    "projectName": "Quick test",
+    "projectId": "<YOUR_PROJECT_ID>",
+    "projectName": "<YOUR_PROJECT_NAME>",
     "settings": {
         "services": {
             "account": true,

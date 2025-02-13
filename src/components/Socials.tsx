@@ -24,7 +24,7 @@ export const Socials = () => {
           <Link
             href={socialLink.url}
             key={socialLink.url}
-            className={"border-neutral-750 rounded-lg border p-1"}
+            className={"rounded-lg border border-neutral-750 p-1"}
           >
             <Image
               src={socialLink.icon.src}

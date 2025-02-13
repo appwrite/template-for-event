@@ -102,9 +102,11 @@ export const Faq = ({ title }: FaqProps) => {
 
   return (
     <div
-      className={"mt-4 flex max-w-screen-xl flex-col gap-4 md:mt-0 md:flex-row"}
+      className={
+        "flex flex-col gap-16 md:flex-row md:items-start md:gap-0 xl:w-[1200px]"
+      }
     >
-      <h2 className={"w-64 text-3xl text-neutral-50"}>{title}</h2>
+      <h2 className={"w-64 shrink-0 text-3xl text-neutral-50"}>{title}</h2>
       <div className={"grow"}>{showEntries()}</div>
     </div>
   );

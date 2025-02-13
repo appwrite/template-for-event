@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer
       className={
-        "flex w-full flex-row items-center justify-between border-t border-neutral-800 bg-neutral-850 px-10 py-6 text-sm"
+        "flex w-full flex-col gap-3 md:flex-row items-start md:items-center justify-between border-t border-neutral-800 bg-neutral-850 p-[24px_40px] text-sm"
       }
     >
       <div>
@@ -21,6 +21,7 @@ export const Footer = () => {
           GitHub
         </Link>
       </div>
+
       <div className={"shrink-0"}>
         <Socials />
       </div>

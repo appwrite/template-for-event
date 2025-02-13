@@ -10,8 +10,13 @@ import { useEffect, useState } from "react";
 
 export default function Dashboard() {
   const [submissions, setSubmissions] = useState<null | Submissions>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
   const getSubmissions = async () => {
-    setSubmissions(await getUserSubmissions());
+    setIsLoading(true);
+    const data = await getUserSubmissions();
+    setSubmissions(data);
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -19,6 +24,14 @@ export default function Dashboard() {
   }, []);
 
   const showSubmissions = () => {
+    if (isLoading) {
+      return (
+        <div className="flex items-center justify-center py-10">
+          <div className="h-6 w-6 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
+        </div>
+      );
+    }
+
     if (submissions) {
       if (submissions.total === 0) {
         return (

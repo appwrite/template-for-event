@@ -1,15 +1,14 @@
 import { Account, type Models, OAuthProvider } from "appwrite";
 import { AppwriteClient } from "@/tools/appwrite";
-import { redirect } from "next/navigation";
 
 export const account = new Account(AppwriteClient);
 
 export const loginWithGithub = () => {
   account.createOAuth2Session(
-    OAuthProvider.Github, // provider
-    window.location.origin + "/hacker", // redirect here on success
-    window.location.origin, // redirect here on failure
-    ["read:user", "user:email"], // scopes (optional)
+    OAuthProvider.Github,
+    window.location.origin + "/hacker",
+    window.location.origin,
+    ["read:user", "user:email"],
   );
 };
 
@@ -28,5 +27,4 @@ export const getUser = (): Promise<
 
 export const signout = async () => {
   await account.deleteSessions();
-  redirect("/");
 };

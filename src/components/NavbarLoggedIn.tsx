@@ -4,12 +4,14 @@ import { Button } from "@/components/Button";
 import { Avatar } from "@/components/Avatar";
 import { signout } from "@/tools/account";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
-type NavbarLoggedinProps = {
+type NavbarLoggedInProps = {
   user: Models.User<Models.Preferences>;
+  clearUser: () => void;
 };
 
-export const NavbarLoggedin = ({ user }: NavbarLoggedinProps) => {
+export const NavbarLoggedIn = ({ user, clearUser }: NavbarLoggedInProps) => {
   return (
     <nav
       className={
@@ -23,9 +25,12 @@ export const NavbarLoggedin = ({ user }: NavbarLoggedinProps) => {
         <Button
           buttonSize={"small"}
           buttonType={"secondary"}
-          onClick={() => {
-            signout();
-          }}
+          onClick={() =>
+            signout().then(() => {
+              clearUser();
+              redirect("/");
+            })
+          }
         >
           Sign out
         </Button>

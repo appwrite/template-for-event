@@ -3,7 +3,7 @@ import { InputTextProps } from "@/components/form/index";
 export const InputText = (props: InputTextProps) => {
   return (
     <label className={"flex flex-col"}>
-      <span className={"text-neutral-250 pb-1.5 text-sm"}>{props.label}</span>
+      <span className={"pb-1.5 text-sm text-neutral-250"}>{props.label}</span>
       <input
         {...props}
         className={
