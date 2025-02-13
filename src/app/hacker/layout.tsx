@@ -2,6 +2,7 @@
 import { NavbarLoggedIn } from "@/components/NavbarLoggedIn";
 import { useUser } from "@/components/UserProvider";
 import { redirect } from "next/navigation";
+import { useEffect } from "react";
 
 export default function LoggedInLayout({
   children,
@@ -10,9 +11,17 @@ export default function LoggedInLayout({
 }>) {
   const { user, clearUser } = useUser();
 
-  return user === null ? (
-    redirect("/")
-  ) : (
+  useEffect(() => {
+    if (user === null) {
+      redirect("/");
+    }
+  }, [user]);
+
+  if (user === null) {
+    return null;
+  }
+
+  return (
     <>
       <div className={"mb-16"}>
         <NavbarLoggedIn user={user} clearUser={clearUser} />
