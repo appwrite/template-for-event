@@ -1,14 +1,22 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
 import { Inter } from "next/font/google";
-import Head from "next/head";
 import { UserProvider } from "@/components/UserProvider";
 
 export const metadata: Metadata = {
   title: "Dev Hackathon",
   description: "The best hackathon in town",
+  openGraph: {
+    title: "Dev Hackathon",
+    description: "The best hackathon in town",
+    images: [
+      {
+        url: "/images/og-image.png",
+      },
+    ],
+  },
 };
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -18,9 +26,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta property="og:image" content="/images/og-image.png" />
-      </Head>
       <body className={inter.className}>
         <UserProvider>{children}</UserProvider>
       </body>
