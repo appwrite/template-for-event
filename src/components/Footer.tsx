@@ -15,7 +15,7 @@ export const Footer = () => {
         </Link>
         . Source code on{" "}
         <Link
-          href={"https://github.com/appwrite"}
+          href={"https://github.com/appwrite/template-for-event"}
           className={"text-white underline"}
         >
           GitHub

@@ -11,7 +11,8 @@ export const metadata: Metadata = {
     description: "The best hackathon in town",
     images: [
       {
-        url: "/images/og-image.png",
+        // URLs need to be absolute!
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/og-image.png`,
       },
     ],
   },
